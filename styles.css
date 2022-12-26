@@ -1,0 +1,148 @@
+body {
+    background-image: url('FARM.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    
+  }
+  
+  nav{
+      width:100%;
+  }
+  
+  nav ul {
+      list-style-type: none;
+      margin-left:auto ;
+      margin-right:auto ;
+      padding: 0;
+  }
+  
+  nav ul li {
+      --c: rgb(0, 0, 0);
+      color: var(--c);
+      font-size: 16px;
+      border: 0.3em solid var(--c);
+      border-radius: 0.5em;
+      width: 12em;
+      height: 3em;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: sans-serif;
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 3em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: 0.5s;
+      margin: 1em auto;
+  }
+  
+  nav ul li span {
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: var(--c);
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+  }
+  
+  nav ul li:hover {
+      color: rgb(255, 255, 255);
+  }
+  
+  nav ul li:hover span {
+      transform: translateY(0) scale(2);
+  }
+  
+  nav ul li span:nth-child(1) {
+      --n: 1;
+  }
+  
+  nav ul li span:nth-child(2) {
+      --n: 2;
+  }
+  
+  nav ul li span:nth-child(3) {
+      --n: 3;
+  }
+  
+  nav ul li span:nth-child(4) {
+      --n: 4;
+  }
+  .noselect {
+      -webkit-touch-callout: none;
+        -webkit-user-select: none;
+         -khtml-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+    }
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    button {
+          width: 150px;
+          height: 50px;
+          cursor: pointer;
+          font-size: 20px;
+          font-family: 'Staatliches', cursive;
+          letter-spacing: 5px;
+          background: #ffc421;
+          border: 2px solid black;
+          box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+          transition: 500ms;
+          
+    }
+    
+    button:after {
+          content: '';
+          position: absolute;
+          transform: translateX(-55px) translateY(-40px);
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: transparent;
+          box-shadow: 0px 0px 50px transparent;
+          transition: 500ms;
+    }
+    
+    button:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+    }
+    
+    button:hover:after {
+          background: white;
+          box-shadow: 0px 0px 20px #ffc421, 0px 0px 30px #ffc421, inset 0px 0px 10px #ffc421;
+          animation: spin 1s infinite linear;
+    }
+    
+    @keyframes spin{
+          25%{transform: translateX(-25px) translateY(-35px);
+                      width: 15px;
+                      height: 15px;}
+          50% {transform: translateX(-55px) translateY(-30px);
+                      width: 5px;
+                      height: 5px;}
+          75% {transform: translateX(-85px) translateY(-35px);
+                      width: 15px;
+                      height: 15px;}
+    }
+    
+    button:focus {
+          outline: none;
+    }
+    
+ 
